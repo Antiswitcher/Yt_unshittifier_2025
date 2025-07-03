@@ -1,0 +1,37 @@
+/* YouTube Recommendation Cleaner Styles */
+
+/* Add subtle hover effect to video thumbnails to indicate they're interactive */
+ytd-rich-item-renderer:hover,
+ytd-compact-video-renderer:hover,
+ytd-video-renderer:hover {
+    position: relative;
+}
+
+/* Visual indicator when dragging */
+.ytrc-dragging {
+    transition: opacity 0.2s ease;
+    user-select: none;
+}
+
+/* Helper tooltip (optional - you can add this to show instructions) */
+.ytrc-tooltip {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    z-index: 10000;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.ytrc-tooltip.show {
+    opacity: 1;
+}
+
+/* Ensure drag feedback is visible */
+.ytrc-drag-feedback {
+    transition: border 0.1s ease;
+}
